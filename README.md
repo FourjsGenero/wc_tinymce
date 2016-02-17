@@ -4,7 +4,7 @@ Web Component interfacing to TinyMCE Rich Text Editor
 (More details about TinyMCe can be found here https://www.tinymce.com/)
 
 To setup, you will need to place the TinyMCE sources in this directory 
-$(ProjectDir)/webcomponents/wc_tinymce/tinymce_src
+$(ProjectDir)/webcomponents/wc_tinymce/tinymce
 
 I took the copy that was shipped in latest GAS version.  So do something like ...
 cp $FGLASDIR/tpl/SetHtml5/tinymce $(ProjectDir)/webcomponents/wc_tinymce/tinymce
