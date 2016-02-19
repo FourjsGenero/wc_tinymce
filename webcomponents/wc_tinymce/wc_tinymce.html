@@ -13,13 +13,19 @@ onICHostReady = function(version) {
 
     // adjust toolbar/menubar to have options you want
     // refer to TinyMCE docs for options available
+    // https://www.tinymce.com/docs/configure/editor-appearance/#toolbar
+    // https://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols
     // TODO Set these from 4gl code
     tinymce.init({
         selector: '#txt_tinymce',
-        toolbar: ['undo redo | bold italic | alignleft aligncenter alignright'],
+        plugins: "textcolor link table",
+        toolbar1: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+        toolbar2: 'link unlink | fontsizeselect fontselect | forecolor backcolor | styleselect',
+        toolbar3: 'inserttable deletetable | cell row column | tableprops styleselect',
         menubar: false
-        
+
     });
+
     
     gICAPI.onProperty = function(propertySet) {
         //alert("On Property");
