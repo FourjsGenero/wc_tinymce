@@ -13,7 +13,7 @@ Key thing is it is looking for
 $(ProjectDir)/webcomponents/wc_tinymce/tinymce/tinymce.min.js
 
 TODO
-1. Figure out why icons don't appear with GDC but they do with GWC-JS.  
-2. See if can figure out better way to tie 4gl variable to contents of Web Component
-3. Add wrappers to set toolbar/menu programmatically
+
+1. See if can figure out better way to tie 4gl variable to contents of Web Component
+2. Add wrappers to set toolbar/menu programmatically
 
