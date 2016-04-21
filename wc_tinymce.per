@@ -1,13 +1,18 @@
-LAYOUT (TEXT="TinyMCE Example")
+LAYOUT (TEXT="TinyMCE Example", MINHEIGHT=25, MINWIDTH=80)
 GRID
 {
-[f01                   ]
-[                      ]
-[                      ]
-[                      ]
-[                      ]
+[f01                                                                         ]
+[                                                                            ]
+[                                                                            ]
+[                                                                            ]
+[                                                                            ]
 }
-
 END
 ATTRIBUTES
-WEBCOMPONENT f01 = formonly.wc, STRETCH=BOTH, COMPONENTTYPE="wc_tinymce";
+WEBCOMPONENT f01 = formonly.wc, STRETCH=BOTH, COMPONENTTYPE="wc_tinymce", PROPERTIES=(
+    plugins="textcolor link table",
+    toolbar1="undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+    toolbar2="link unlink | fontsizeselect fontselect | forecolor backcolor | styleselect",
+    toolbar3="inserttable deletetable | cell row column | tableprops styleselect",
+    menubar=false
+    );

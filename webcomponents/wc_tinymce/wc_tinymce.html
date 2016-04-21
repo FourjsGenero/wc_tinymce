@@ -16,19 +16,20 @@ onICHostReady = function(version) {
     // https://www.tinymce.com/docs/configure/editor-appearance/#toolbar
     // https://www.tinymce.com/docs/advanced/editor-control-identifiers/#toolbarcontrols
     // TODO Set these from 4gl code
-    tinymce.init({
-        selector: '#txt_tinymce',
-        plugins: "textcolor link table",
-        toolbar1: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-        toolbar2: 'link unlink | fontsizeselect fontselect | forecolor backcolor | styleselect',
-        toolbar3: 'inserttable deletetable | cell row column | tableprops styleselect',
-        menubar: false
 
-    });
-
-    
+   
+        
     gICAPI.onProperty = function(propertySet) {
-        //alert("On Property");
+        ps=eval('(' + propertySet + ')');
+
+        tinymce.init({
+            selector: '#txt_tinymce',
+            plugins: ps.plugins,
+            toolbar1: ps.toolbar1,
+            toolbar2: ps.toolbar2,
+            toolbar3: ps.toolbar3,
+            menubar: ps.menubar
+        });
     }
 
     gICAPI.onData = function(data) {
@@ -38,15 +39,15 @@ onICHostReady = function(version) {
     gICAPI.onFocus = function(polarity) {
         //alert("On Focus");
     }
-    
+
     set_content = function(c) {
         tinymce.activeEditor.setContent(c);
     }
-
+    
     get_content = function() {
         return tinyMCE.activeEditor.getContent();
     }
-
+    
     // Use this for debugging
     show_content = function() {
         alert(tinyMCE.activeEditor.getContent());
