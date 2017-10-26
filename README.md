@@ -1,3 +1,8 @@
+# !!! DEPRECATED !!!
+
+The 3.10 release of Genero includes Built-in Web Components, one of which is the fglrichtext Web Component http://4js.com/online_documentation/fjs-fgl-manual-html/#c_fgl_fgl_web_components_fglrichtext.html.  I would encourage you to use this WebComponent for your rich text editing requirements.
+
+
 # wc_tinymce
 Web Component interfacing to TinyMCE Rich Text Editor
 
